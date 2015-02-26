@@ -10,7 +10,8 @@
     <sprite>sprites\sprBettMitSchlafendem</sprite>
     <sprite>sprites\sprSteht</sprite>
     <sprite>sprites\sprNachRechts</sprite>
-    <sprite>sprites\sprNachLinks</sprite>
+    <sprite>sprites\sprSitztAufStuhl</sprite>
+    <sprite>sprites\sprStuhl</sprite>
     <sprite>sprites\sprBoden</sprite>
   </sprites>
   <backgrounds name="background"/>
@@ -18,11 +19,13 @@
   <scripts name="scripts">
     <script>scripts\playerWalking.gml</script>
     <script>scripts\checkIfPlayerWantsToSleep.gml</script>
+    <script>scripts\checkIfPlayerWantsToSit.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\objSpieler</object>
     <object>objects\objBoden</object>
     <object>objects\objBett</object>
+    <object>objects\objStuhl</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>

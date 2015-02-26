@@ -31,12 +31,14 @@ hsp = 0;
 vsp = 0;
 jumpspeed = 400/room_speed;
 movespeed = 100/room_speed;
-image_speed = movespeed / 15;
+AnimationSpeed = movespeed / 15;
 
 StateWalking = 0;
 StateSleeping = 1;
+StateSitting = 2;
 
 CurrentBett = noone;
+CurrentStuhl = noone;
 
 PlayerState = StateWalking;
 </string>
@@ -70,9 +72,22 @@ switch PlayerState {
     case StateWalking:
         if checkIfPlayerWantsToSleep() {
             PlayerState = StateSleeping;
+        } else if checkIfPlayerWantsToSit() {
+            PlayerState = StateSitting;
         } else {
             playerWalking();
         }
+        break;
+    case StateSitting:
+        if key_jump {
+            if CurrentStuhl != noone {
+                with CurrentStuhl {
+                    sprite_index = sprStuhl;
+                }
+            }
+            PlayerState = StateWalking;
+            keyboard_clear(ord('W'));
+        }        
         break;
     case StateSleeping:
         if key_jump {

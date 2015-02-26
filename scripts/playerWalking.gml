@@ -3,8 +3,10 @@ hsp = move * movespeed;
 
 if move > 0 {
     sprite_index = sprNachRechts;
+    image_xscale = 1;
 } else if move < 0 {
-    sprite_index = sprNachLinks;
+    sprite_index = sprNachRechts;
+    image_xscale = -1;
 } else {
     sprite_index = sprSteht;
 }
@@ -31,5 +33,10 @@ if place_meeting(x, y+vsp, objBoden) {
     vsp = 0;
 }
 
-y += vsp;
+if vsp != 0 {
+    image_speed = 0;
+} else {
+    image_speed = AnimationSpeed;
+}
 
+y += vsp;
