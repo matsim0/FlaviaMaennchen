@@ -29,9 +29,9 @@
 grav = 1000/room_speed/room_speed;
 hsp = 0;
 vsp = 0;
-jumpspeed = 400/room_speed;
-movespeed = 100/room_speed;
-AnimationSpeed = movespeed / 15;
+JumpSpeed = 400/room_speed;
+MoveSpeed = 100/room_speed;
+AnimationSpeed = MoveSpeed / 15;
 
 StateWalking = 0;
 StateSleeping = 1;

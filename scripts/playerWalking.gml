@@ -1,5 +1,5 @@
 move = key_left + key_right;
-hsp = move * movespeed;
+hsp = move * MoveSpeed;
 
 if move > 0 {
     sprite_index = sprNachRechts;
@@ -14,7 +14,7 @@ if move > 0 {
 if (vsp < 10) vsp += grav;
 
 if place_meeting(x, y+1, objBoden) {
-    vsp = key_jump * -jumpspeed
+    vsp = key_jump * -JumpSpeed
 }
 
 if place_meeting(x+hsp, y, objBoden) {
