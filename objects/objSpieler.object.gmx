@@ -36,9 +36,11 @@ AnimationSpeed = MoveSpeed / 15;
 StateWalking = 0;
 StateSleeping = 1;
 StateSitting = 2;
+StateEating = 3;
 
 CurrentBett = noone;
 CurrentStuhl = noone;
+CurrentTisch = noone;
 
 PlayerState = StateWalking;
 </string>
@@ -74,6 +76,8 @@ switch PlayerState {
             PlayerState = StateSleeping;
         } else if checkIfPlayerWantsToSit() {
             PlayerState = StateSitting;
+        } else if checkIfPlayerWantsToEat() {
+            PlayerState = StateEating;
         } else {
             playerWalking();
         }
@@ -94,6 +98,17 @@ switch PlayerState {
             if CurrentBett != noone {
                 with CurrentBett {
                     sprite_index = sprBett;
+                }
+            }
+            PlayerState = StateWalking;
+            keyboard_clear(ord('W'));
+        }
+        break;
+    case StateEating:
+        if key_jump {
+            if CurrentTisch != noone {
+                with CurrentTisch {
+                    sprite_index = sprTischMitStuhl;
                 }
             }
             PlayerState = StateWalking;
