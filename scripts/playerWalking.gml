@@ -15,7 +15,12 @@ if (vsp < 10) vsp += grav;
 
 if place_meeting(x, y+1, objBoden) {
     vsp = key_jump * -JumpSpeed
+    if key_jump = 1 {
+        audio_play_sound(sndJumpWeibchen, 10, false);
+    }
 }
+
+
 
 if place_meeting(x+hsp, y, objBoden) {
     while !place_meeting(x + sign(hsp), y, objBoden) {
