@@ -17,8 +17,12 @@
     <sprite>sprites\sprTischMitStuhl</sprite>
     <sprite>sprites\sprTischMitEssender</sprite>
     <sprite>sprites\sprBoden</sprite>
+    <sprite>sprites\sprGras</sprite>
+    <sprite>sprites\sprSonne</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\bckBlue</background>
+  </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\playerWalking.gml</script>
@@ -32,6 +36,7 @@
     <object>objects\objBett</object>
     <object>objects\objStuhl</object>
     <object>objects\objTischMitStuhl</object>
+    <object>objects\objSonne</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
