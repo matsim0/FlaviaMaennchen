@@ -43,6 +43,8 @@ CurrentStuhl = noone;
 CurrentTisch = noone;
 
 PlayerState = StateWalking;
+
+initializeWalkingSound();
 </string>
           </argument>
         </arguments>

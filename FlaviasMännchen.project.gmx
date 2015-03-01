@@ -6,6 +6,7 @@
   <NewExtensions/>
   <sounds name="sound">
     <sound>sound\sndJumpWeibchen</sound>
+    <sound>sound\sndSchrittWeibchen</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\sprBett</sprite>
@@ -29,6 +30,8 @@
     <script>scripts\checkIfPlayerWantsToSleep.gml</script>
     <script>scripts\checkIfPlayerWantsToSit.gml</script>
     <script>scripts\checkIfPlayerWantsToEat.gml</script>
+    <script>scripts\playWalkingSound.gml</script>
+    <script>scripts\initializeWalkingSound.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\objSpieler</object>
@@ -37,6 +40,7 @@
     <object>objects\objStuhl</object>
     <object>objects\objTischMitStuhl</object>
     <object>objects\objSonne</object>
+    <object>objects\objGras</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>

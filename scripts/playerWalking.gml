@@ -38,6 +38,12 @@ if place_meeting(x, y+vsp, objBoden) {
     vsp = 0;
 }
 
+if place_meeting(x, y, objGras) and hsp != 0 and vsp = 0 {    
+    playWalkingSound();
+} else {
+    initializeWalkingSound();
+}
+
 if vsp != 0 {
     image_speed = 0;
 } else {
